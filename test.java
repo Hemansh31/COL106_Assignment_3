@@ -1,0 +1,67 @@
+class test{
+	public static void main(String[] args) throws Exception{
+		/*String fname2="Lallan";
+		String lname2="Singh";
+		Tupple<String> name2=new Tupple<String>(fname2,lname2);
+		String fname1="Ram";
+		String lname1="Singh";
+		Tupple<String> name1=new Tupple<String>(fname1,lname1);
+		String fname3="Shyam";
+		String lname3="Singh";
+		Tupple<String> name3=new Tupple<String>(fname3,lname3);
+		//System.out.println(name.toString());
+		//System.out.println(name.equals(name1));
+		student me1=new student("Ram","Singh","Kumaon","EE1","8.58");
+		student me2=new student("Shyam","Singh","Kumaon","EE1","8.58");
+		student me3=new student("Lallan","Singh","Kumaon","EE1","9.88");
+		dhtable<Tupple<String>,student> testthis=new dhtable<Tupple<String>,student>(11);
+		//student me2u=new student("Arun","Khaneja","Kumaon","EE1","6.58");
+		int a=testthis.insert(name1,me1);
+		int b=testthis.insert(name2,me2);
+		int c=testthis.insert(name3,me3);
+		//int d=testthis.update(name2,me2u);
+		//int e=testthis.delete(name1);
+		System.out.println(a);
+		System.out.println(b);
+		System.out.println(c);
+		System.out.println(testthis.address(name1));
+		System.out.println(testthis.address(name2));
+		System.out.println(testthis.address(name3));
+		System.out.println(name1.compareTo(name3));*/
+		String fname1="Ram";
+		String lname1="Singh";
+		Tupple<String> name1=new Tupple<String>(fname1,lname1);
+		student me1=new student("Ram","Singh","Kumaon","EE1","8.58");
+		bstnode<Tupple<String>,student> root=new bstnode<Tupple<String>,student>(name1,me1);
+		bst<Tupple<String>,student> thisbst=new bst<Tupple<String>,student>(root);
+		String fname2="Lallan";
+		String lname2="Singh";
+		Tupple<String> name2=new Tupple<String>(fname2,lname2);
+		student me2=new student("Shyam","Singh","Kumaon","EE1","8.58");
+		bstnode<Tupple<String>,student> c1=new bstnode<Tupple<String>,student>(name2,me2);
+		String fname3="Shyam";
+		String lname3="Singh";
+		Tupple<String> name3=new Tupple<String>(fname3,lname3);
+		student me3=new student("Lallan","Singh","Kumaon","EE1","9.88");
+		bstnode<Tupple<String>,student> c2=new bstnode<Tupple<String>,student>(name3,me3);
+		student me2u=new student("Shyam","Singh","Kumaon","EE1","6.58");
+		bstnode<Tupple<String>,student> c1u=new bstnode<Tupple<String>,student>(name2,me2u);
+		String fname4="Shyam2";
+		String lname4="Singh2";
+		Tupple<String> name4=new Tupple<String>(fname4,lname4);
+		student me4=new student("Shyam","Singh","Kumaon","EE1","6.58");
+		bstnode<Tupple<String>,student> c4=new bstnode<Tupple<String>,student>(name4,me4);
+		int a=thisbst.insert(root,c1);
+		int b=thisbst.insert(root,c2);
+		int d=thisbst.insert(root,c4);
+		System.out.println(root.left.getvalue().cgpa());
+		int c=thisbst.update(root,c1u);
+		System.out.println(root.left.getvalue().cgpa());
+		System.out.println(thisbst.contain(root,name1));
+		//System.out.println(thisbst.delete(thisbst,name1));
+		//System.out.println(thisbst.contain(root,name4));
+		System.out.println(thisbst.address(root,name3));
+		//System.out.println(root.left.getkey().toString());
+		//System.out.println(root.right.getkey().toString());
+	}
+}
